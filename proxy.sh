@@ -44,7 +44,3 @@ sleep 5
 exit
 }
 start
-test()
-{
-echo "test"
-}
