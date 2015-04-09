@@ -31,7 +31,7 @@ echo "          Type in new login user for Squid proxy server          "
 read user
 htpasswd /etc/squid3/squid-passwd $user
 echo "          Getting conf file from server          "
-wget http://www.webbhatt.com//databas/squid.conf
+wget http://www.webbhatt.com/databas/squid.conf
 sudo cat squid.conf > /etc/squid3/squid.conf
 echo "          Wait for service to start....          "
 sudo service squid3 restart
