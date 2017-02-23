@@ -2,7 +2,7 @@
 start()
 {
 clear
-if [ -d /etc/squid3 ]
+if [ -d /etc/squid ]
 then
 echo "Squid already installed"
      while true; do
@@ -24,15 +24,15 @@ sudo apt-get install apache2-utils -y
 sudo apt-get install curl -y
 clear
 echo "          Configurating....          "
-sudo touch /etc/squid3/squid-passwd
-sudo chmod o+r /etc/squid3/squid-passwd
+sudo touch /etc/squid/squid-passwd
+sudo chmod o+r /etc/squid/squid-passwd
 
 echo "          Type in new login user for Squid proxy server          "
 read user
 htpasswd /etc/squid3/squid-passwd $user
 echo "          Getting conf file from server          "
 wget http://www.webbhatt.com/databas/squid.conf
-sudo cat squid.conf > /etc/squid3/squid.conf
+sudo cat squid.conf > /etc/squid/squid.conf
 echo "          Wait for service to start....          "
 sudo service squid3 restart
 sleep 1
