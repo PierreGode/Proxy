@@ -16,7 +16,6 @@ echo "Squid already installed"
     * ) echo 'Please answer yes or no.';;
    esac
 done
-fi
 else
 sudo apt-get install squid3 -y
 fi
