@@ -29,12 +29,12 @@ sudo chmod o+r /etc/squid/squid-passwd
 
 echo "          Type in new login user for Squid proxy server          "
 read user
-htpasswd /etc/squid3/squid-passwd $user
+htpasswd /etc/squid/squid-passwd $user
 echo "          Getting conf file from server          "
 wget http://www.webbhatt.com/databas/squid.conf
 sudo cat squid.conf > /etc/squid/squid.conf
 echo "          Wait for service to start....          "
-sudo service squid3 restart
+sudo service squid restart
 sleep 1
 clear
 echo "  Remember to open port 3128 on firewall or portforward "
