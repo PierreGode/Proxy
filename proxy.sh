@@ -1,7 +1,7 @@
 #!/bin/bash
 start()
 {
-
+clear
 if [ -d /etc/squid3 ]
 then
 echo "Squid already installed"
