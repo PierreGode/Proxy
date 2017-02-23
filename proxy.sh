@@ -1,14 +1,10 @@
 #!/bin/bash
 start()
 {
+
 if [ -d /etc/squid3 ]
 then
-      echo -e "$warn\ninstalling Squid server"
-      sudo apt-get install squid3 -y
-      else 
-	  clear
-	 
-	  echo "                              Squid proxyserver is already installed          "
+echo "Squid already installed"
      while true; do
      read -p 'Do you really want to continue with this setup? all previous information will be lost! (y/n)?' yn
    case $yn in
@@ -21,6 +17,10 @@ then
    esac
 done
 fi
+else
+sudo apt-get install squid3 -y
+fi
+
 sudo apt-get install apache2-utils -y
 sudo apt-get install curl -y
 clear
