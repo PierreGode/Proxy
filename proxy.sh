@@ -1,7 +1,8 @@
 #!/bin/bash
 start()
 {
-if [[ ! -x /etc/squid3 ]];then
+if [ -d /etc/squid3 ]
+then
       echo -e "$warn\ninstalling Squid server"
       sudo apt-get install squid3 -y
       else 
